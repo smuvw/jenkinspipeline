@@ -10,7 +10,7 @@ stages{
              sh 'mvn clean comple'
          }
 
-}
+
 }
 stage('Deploy Stage'){
  
@@ -19,7 +19,7 @@ stage('Deploy Stage'){
              sh 'mvn test'
          }
 
-}
+
 }
 
 stage('Test Stage'){
@@ -29,7 +29,7 @@ stage('Test Stage'){
              sh 'mvn deploy'
          }
 
-}
+
 }
 
 }
