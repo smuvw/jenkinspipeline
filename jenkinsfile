@@ -1,38 +1,17 @@
-pipeline{
-agent any
-
-stages{
-
-   stage('Comple Stage'){
+pipeline {
+ agent any
  
-      steps{
-       { 
-             sh 'mvn clean compile'
-         }
+ stages {
 
+     stage ('Compile Stage') {
 
-}
-}
-stage('Deploy Stage'){
- 
-      steps{
-       { 
-             sh 'mvn test'
-         }
-
+        steps {
+          withMaven(maven : maven_3_3_9') {
 
 }
-}
-
-stage('Test Stage'){
- 
-      steps{
-      { 
-             sh 'mvn deploy'
-         }
 
 }
-}
+
 
 }
 
