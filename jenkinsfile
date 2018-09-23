@@ -1,0 +1,37 @@
+pipeline{
+agent any
+
+stages{
+
+   stage('Comple Stage'){
+ 
+      steps{
+       withMaven(maven : 'maveb_3_3_9'){ 
+             sh 'mvn clean comple'
+         }
+
+}
+}
+stage('Deploy Stage'){
+ 
+      steps{
+       withMaven(maven : 'maveb_3_3_9'){ 
+             sh 'mvn test'
+         }
+
+}
+}
+
+stage('Test Stage'){
+ 
+      steps{
+       withMaven(maven : 'maveb_3_3_9'){ 
+             sh 'mvn deploy'
+         }
+
+}
+}
+
+}
+
+}
