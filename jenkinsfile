@@ -7,10 +7,11 @@ stages{
  
       steps{
        { 
-             sh 'mvn clean comple'
+             sh 'mvn clean compile'
          }
 
 
+}
 }
 stage('Deploy Stage'){
  
@@ -21,6 +22,7 @@ stage('Deploy Stage'){
 
 
 }
+}
 
 stage('Test Stage'){
  
@@ -29,7 +31,7 @@ stage('Test Stage'){
              sh 'mvn deploy'
          }
 
-
+}
 }
 
 }
