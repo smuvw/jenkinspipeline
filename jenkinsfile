@@ -6,7 +6,7 @@ stages{
    stage('Comple Stage'){
  
       steps{
-       withMaven(maven : 'maveb_3_3_9'){ 
+       { 
              sh 'mvn clean comple'
          }
 
@@ -15,7 +15,7 @@ stages{
 stage('Deploy Stage'){
  
       steps{
-       withMaven(maven : 'maveb_3_3_9'){ 
+       { 
              sh 'mvn test'
          }
 
@@ -25,7 +25,7 @@ stage('Deploy Stage'){
 stage('Test Stage'){
  
       steps{
-       withMaven(maven : 'maveb_3_3_9'){ 
+      { 
              sh 'mvn deploy'
          }
 
