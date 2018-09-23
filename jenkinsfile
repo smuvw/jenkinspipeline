@@ -6,7 +6,7 @@ pipeline {
      stage ('Compile Stage') {
 
         steps {
-          withMaven(maven : maven_3_3_9') {
+          withMaven('maven : maven_3_3_9') {
 
 }
 
